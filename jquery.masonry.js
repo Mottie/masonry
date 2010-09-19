@@ -80,7 +80,7 @@
         }
             
         var position = {
-          left: props.colW * shortCol + props.posLeft,
+          right: props.colW * shortCol + props.posRight,
           top: minimumY
         };
             
@@ -129,10 +129,12 @@
           $wall.prepend( $cursor );
           props.posTop =  Math.round( $cursor.position().top );
           props.posLeft = Math.round( $cursor.position().left );
+          $cursor.css({ 'float': 'right', display: 'inline-block'});
+          props.posRight = Math.round( $wall.outerWidth() - $cursor.position().left );
           $cursor.remove();
         } else {
           props.posTop =  props.previousData.posTop;
-          props.posLeft = props.previousData.posLeft;
+          props.posRight = props.previousData.posRight;
         }
         
         // set up column Y array

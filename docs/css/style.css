@@ -193,11 +193,12 @@ button {
 }
 
 .box {
+  direction: rtl;
   margin: 5px;
   padding: 5px;
   background: #D8D5D2;
   font-size: 11px;
-  float: left;
+  float: right;
   -webkit-border-radius: 5px;
      -moz-border-radius: 5px;
           border-radius: 5px;
