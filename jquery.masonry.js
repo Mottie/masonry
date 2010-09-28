@@ -107,6 +107,13 @@
         } else {
           props.colW = opts.columnWidth;
         }
+        
+        if ( props.colW === 0 ) {
+          if ( console ) {
+            console.error('Column width calculated to be zero. Cannot divide by zero.');
+          }
+          return;
+        }
 
         props.colCount = Math.floor( $wall.width() / props.colW ) ;
         props.colCount = Math.max( props.colCount, 1 );
